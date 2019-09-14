@@ -10,46 +10,15 @@ using System.Linq.Expressions;
 
 namespace RegistroEstudiante.BLL
 {
-    public class EstudiantesBLL
+    public class InscripcionesBLL
     {
-        public static bool GuardarBalance(int id, decimal balance)
-        {
-            bool paso = false;
-            Contexto db = new Contexto();
-            Estudiantes estudiante = new Estudiantes();
-            estudiante = db.Estudiante.Find(id);
-            if (estudiante != null)
-            {
-                try
-                {
-                    if (balance == 0)
-                        estudiante.Balance = 0;
-                    else
-                        estudiante.Balance += balance;
-
-                    db.Entry(estudiante).State = EntityState.Modified;
-                    paso = (db.SaveChanges() > 0);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                finally
-                {
-                    db.Dispose();
-                }
-            }
-            
-            return paso;
-        }
-
-        public static bool Guardar(Estudiantes estudiante)
+        public static bool Guardar(Inscripciones inscripcion)
         {
             bool paso = false;
             Contexto db = new Contexto();
             try
             {
-                if (db.Estudiante.Add(estudiante) != null)
+                if (db.Inscripcion.Add(inscripcion) != null)
                     paso = db.SaveChanges() > 0;
             }
             catch (Exception)
@@ -63,15 +32,14 @@ namespace RegistroEstudiante.BLL
             return paso;
         }
 
-        public static bool Modificar(Estudiantes estudiante)
+        public static bool Modificar(Inscripciones inscripcion)
         {
             bool paso = false;
             Contexto db = new Contexto();
-
             try
             {
-                db.Entry(estudiante).State = EntityState.Modified;
-                paso = (db.SaveChanges() > 0);
+                db.Entry(inscripcion).State = EntityState.Modified;
+                paso = db.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -91,9 +59,9 @@ namespace RegistroEstudiante.BLL
 
             try
             {
-                var eliminar = db.Estudiante.Find(id);
+                var eliminar = db.Inscripcion.Find(id);
                 db.Entry(eliminar).State = EntityState.Deleted;
-                paso = (db.SaveChanges() > 0);
+                paso = db.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -106,13 +74,13 @@ namespace RegistroEstudiante.BLL
             return paso;
         }
 
-        public static Estudiantes Buscar(int id)
+        public static Inscripciones Buscar(int id)
         {
             Contexto db = new Contexto();
-            Estudiantes estudiante = new Estudiantes();
+            Inscripciones inscripcion = new Inscripciones();
             try
             {
-                estudiante = db.Estudiante.Find(id);
+                inscripcion = db.Inscripcion.Find(id);
             }
             catch (Exception)
             {
@@ -121,17 +89,19 @@ namespace RegistroEstudiante.BLL
             finally
             {
                 db.Dispose();
+
             }
-            return estudiante;
+            return inscripcion;
         }
 
-        public static List<Estudiantes> GetList(Expression<Func<Estudiantes, bool>> estudiante)
+        public static List<Inscripciones> GetList(Expression<Func<Inscripciones, bool>> inscripcion)
         {
-            List<Estudiantes> Lista = new List<Estudiantes>();
+            List<Inscripciones> Lista = new List<Inscripciones>();
             Contexto db = new Contexto();
+
             try
             {
-                Lista = db.Estudiante.Where(estudiante).ToList();
+                Lista = db.Inscripcion.Where(inscripcion).ToList();
             }
             catch (Exception)
             {

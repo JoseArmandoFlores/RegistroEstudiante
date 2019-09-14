@@ -20,11 +20,11 @@ namespace RegistroEstudiante.Entidades
         public string Email { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public int Sexo { get; set; }
-        public float Balance { get; set; }
+        public decimal Balance { get; set; }
 
         public Estudiantes() { }
 
-        public Estudiantes(int estudianteId, string matricula, string nombres, string apellidos, string cedula, string telefono, string celular, string email, DateTime fechaNacimiento, int sexo, float balance)
+        public Estudiantes(int estudianteId, string matricula, string nombres, string apellidos, string cedula, string telefono, string celular, string email, DateTime fechaNacimiento, int sexo, decimal balance)
         {
             EstudianteId = estudianteId;
             Matricula = matricula;

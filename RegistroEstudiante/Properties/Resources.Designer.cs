@@ -113,9 +113,29 @@ namespace RegistroEstudiante.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estudiante_universitaria_con_smartphone_en_biblioteca {
+            get {
+                object obj = ResourceManager.GetObject("estudiante-universitaria-con-smartphone-en-biblioteca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondo_aprendizaje_estudiante_burbujas_dialogo_geometricas_23_2147599041 {
             get {
                 object obj = ResourceManager.GetObject("fondo-aprendizaje-estudiante-burbujas-dialogo-geometricas_23-2147599041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap insc {
+            get {
+                object obj = ResourceManager.GetObject("insc", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

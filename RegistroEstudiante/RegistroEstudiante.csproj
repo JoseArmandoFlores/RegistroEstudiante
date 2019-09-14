@@ -54,8 +54,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\EstudiantesBLL.cs" />
+    <Compile Include="BLL\InscripcionesBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Estudiantes.cs" />
+    <Compile Include="Entidades\Inscripciones.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,17 +66,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\Consultas\ConsultaEstudiante.cs">
+    <Compile Include="UI\Consultas\ConsultaEstudianteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Consultas\ConsultaEstudiante.Designer.cs">
-      <DependentUpon>ConsultaEstudiante.cs</DependentUpon>
+    <Compile Include="UI\Consultas\ConsultaEstudianteForm.Designer.cs">
+      <DependentUpon>ConsultaEstudianteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaInscripcionesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\ConsultaInscripcionesForm.Designer.cs">
+      <DependentUpon>ConsultaInscripcionesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Registros\RegistroEstudianteForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Registros\RegistroEstudianteForm.Designer.cs">
       <DependentUpon>RegistroEstudianteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\RegistroInscripcionesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\RegistroInscripcionesForm.Designer.cs">
+      <DependentUpon>RegistroInscripcionesForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -89,11 +103,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\Consultas\ConsultaEstudiante.resx">
-      <DependentUpon>ConsultaEstudiante.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Consultas\ConsultaEstudianteForm.resx">
+      <DependentUpon>ConsultaEstudianteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\ConsultaInscripcionesForm.resx">
+      <DependentUpon>ConsultaInscripcionesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registros\RegistroEstudianteForm.resx">
       <DependentUpon>RegistroEstudianteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\RegistroInscripcionesForm.resx">
+      <DependentUpon>RegistroInscripcionesForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +134,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\EstudiantesScripts.sql" />
+    <None Include="Resources\estudiante-universitaria-con-smartphone-en-biblioteca.jpg" />
+    <None Include="Resources\insc.png" />
     <None Include="Resources\fondo-aprendizaje-estudiante-burbujas-dialogo-geometricas_23-2147599041.jpg" />
     <None Include="Resources\depositphotos_101541302-stock-illustration-user-icon-team-people-vector.jpg" />
     <None Include="Resources\depositphotos_87132830-stock-illustration-new-tag-flat-icon.jpg" />

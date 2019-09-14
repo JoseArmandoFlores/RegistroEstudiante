@@ -48,7 +48,6 @@ namespace RegistroEstudiante.UI.Registros
             estudiante.Email = EmailTextBox.Text;
             estudiante.FechaNacimiento = FechaNacimientoDateTimePicker.Value;
             estudiante.Sexo = SexoComboBox.SelectedIndex;
-            estudiante.Balance = Convert.ToSingle(BalanceTextBox.Text);
 
             return estudiante;
         }
@@ -124,13 +123,6 @@ namespace RegistroEstudiante.UI.Registros
             {
                 MyErrorProvider.SetError(SexoComboBox, "El campo Sexo no puede estar vacío.");
                 SexoComboBox.Focus();
-                paso = false;
-            }
-
-            if (string.IsNullOrWhiteSpace(BalanceTextBox.Text))
-            {
-                MyErrorProvider.SetError(BalanceTextBox, "El campo Balance no puede estar vacío.");
-                BalanceTextBox.Focus();
                 paso = false;
             }
             return paso;

@@ -90,6 +90,7 @@
             // 
             this.BalanceTextBox.Location = new System.Drawing.Point(199, 318);
             this.BalanceTextBox.Name = "BalanceTextBox";
+            this.BalanceTextBox.ReadOnly = true;
             this.BalanceTextBox.Size = new System.Drawing.Size(238, 22);
             this.BalanceTextBox.TabIndex = 45;
             // 
@@ -291,7 +292,7 @@
             this.GuardarButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.GuardarButton.Image = global::RegistroEstudiante.Properties.Resources._55078678_guardar_icono_del_disquete_botón_cuadrado_azul_cian;
             this.GuardarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.GuardarButton.Location = new System.Drawing.Point(217, 365);
+            this.GuardarButton.Location = new System.Drawing.Point(197, 365);
             this.GuardarButton.Name = "GuardarButton";
             this.GuardarButton.Size = new System.Drawing.Size(75, 55);
             this.GuardarButton.TabIndex = 50;
@@ -305,7 +306,7 @@
             this.EliminarButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EliminarButton.Image = global::RegistroEstudiante.Properties.Resources.depositphotos_59534697_stock_illustration_delete_icon;
             this.EliminarButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.EliminarButton.Location = new System.Drawing.Point(362, 365);
+            this.EliminarButton.Location = new System.Drawing.Point(342, 365);
             this.EliminarButton.Name = "EliminarButton";
             this.EliminarButton.Size = new System.Drawing.Size(75, 55);
             this.EliminarButton.TabIndex = 49;
@@ -319,7 +320,7 @@
             this.NuevoButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.NuevoButton.Image = global::RegistroEstudiante.Properties.Resources.depositphotos_87132830_stock_illustration_new_tag_flat_icon;
             this.NuevoButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.NuevoButton.Location = new System.Drawing.Point(75, 365);
+            this.NuevoButton.Location = new System.Drawing.Point(55, 365);
             this.NuevoButton.Name = "NuevoButton";
             this.NuevoButton.Size = new System.Drawing.Size(75, 55);
             this.NuevoButton.TabIndex = 48;
